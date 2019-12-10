@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="卒業制作のソフトウェア開発" company="" webLink="http://" view-date="2015-10-01" view-index="0" gantt-divider-location="439" resource-divider-location="371" version="2.8.5" locale="ja_JP">
+    <description/>
+    <view zooming-state="default:8" id="gantt-chart">
+        <field id="tpd3" name="名前" width="283" order="0"/>
+        <field id="tpd4" name="開始日" width="75" order="1"/>
+        <field id="tpd5" name="終了日" width="60" order="2"/>
+        <option id="color.recent"><![CDATA[#ff0000]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="名前" width="186" order="0"/>
+        <field id="1" name="役割" width="180" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+        <date year="" month="1" date="1" type="HOLIDAY"/>
+        <date year="" month="2" date="11" type="HOLIDAY"/>
+        <date year="" month="4" date="29" type="HOLIDAY"/>
+        <date year="" month="4" date="30" type="HOLIDAY"/>
+        <date year="" month="5" date="3" type="HOLIDAY"/>
+        <date year="" month="5" date="4" type="HOLIDAY"/>
+        <date year="" month="5" date="5" type="HOLIDAY"/>
+        <date year="" month="9" date="23" type="HOLIDAY"/>
+        <date year="" month="11" date="3" type="HOLIDAY"/>
+        <date year="" month="11" date="23" type="HOLIDAY"/>
+        <date year="" month="12" date="23" type="HOLIDAY"/>
+        <date year="" month="12" date="31" type="HOLIDAY"/>
+        <date year="2012" month="1" date="1" type="HOLIDAY"/>
+        <date year="2012" month="1" date="9" type="HOLIDAY"/>
+        <date year="2012" month="3" date="20" type="HOLIDAY"/>
+        <date year="2012" month="7" date="16" type="HOLIDAY"/>
+        <date year="2012" month="9" date="17" type="HOLIDAY"/>
+        <date year="2012" month="9" date="22" type="HOLIDAY"/>
+        <date year="2012" month="10" date="8" type="HOLIDAY"/>
+        <date year="2012" month="12" date="24" type="HOLIDAY"/>
+        <date year="2006" month="1" date="9" type="HOLIDAY"/>
+        <date year="2006" month="7" date="17" type="HOLIDAY"/>
+        <date year="2006" month="10" date="9" type="HOLIDAY"/>
+        <date year="2007" month="1" date="8" type="HOLIDAY"/>
+        <date year="2007" month="2" date="12" type="HOLIDAY"/>
+        <date year="2007" month="4" date="30" type="HOLIDAY"/>
+        <date year="2007" month="7" date="16" type="HOLIDAY"/>
+        <date year="2007" month="9" date="17" type="HOLIDAY"/>
+        <date year="2007" month="9" date="24" type="HOLIDAY"/>
+        <date year="2007" month="10" date="8" type="HOLIDAY"/>
+        <date year="2007" month="10" date="24" type="HOLIDAY"/>
+        <date year="2008" month="1" date="7" type="HOLIDAY"/>
+        <date year="2008" month="3" date="24" type="HOLIDAY"/>
+        <date year="2008" month="7" date="21" type="HOLIDAY"/>
+        <date year="2008" month="10" date="6" type="HOLIDAY"/>
+        <date year="2008" month="11" date="24" type="HOLIDAY"/>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="1" name="学園祭用ソフトウェア開発" color="#8cb6ce" meeting="false" start="2015-10-29" duration="79" complete="7" expand="true">
+            <task id="17" name="プロジェクト全体の管理" color="#8cb6ce" meeting="false" start="2015-10-29" duration="1" complete="0" expand="true"/>
+            <task id="21" name="要件管理" color="#000000" meeting="false" start="2015-10-29" duration="26" complete="20" expand="true">
+                <task id="22" name="コンセプトペーパー作成" color="#8cb6ce" meeting="false" start="2015-10-29" duration="11" complete="100" expand="true"/>
+                <task id="23" name="要求仕様の作成" color="#8cb6ce" meeting="false" start="2015-11-12" duration="11" complete="0" expand="true">
+                    <depend id="24" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="177" name="事前調査" meeting="false" start="2015-10-29" duration="20" complete="0" expand="true">
+                    <task id="179" name="必要技術の洗い出し" color="#00ff00" meeting="false" start="2015-10-29" duration="20" complete="0" expand="true"/>
+                </task>
+                <task id="24" name="仕様書作成" color="#000000" meeting="false" start="2015-11-30" duration="6" complete="0" expand="true">
+                    <task id="25" name="外部・内部仕様書作成" color="#8cb6ce" meeting="false" start="2015-11-30" duration="6" complete="0" expand="true"/>
+                </task>
+                <task id="158" name="ソフトウェア見積り" color="#00ffff" meeting="false" start="2015-11-19" duration="6" complete="0" expand="true"/>
+            </task>
+            <task id="26" name="開発計画" meeting="false" start="2015-11-12" duration="1" complete="0" expand="true">
+                <depend id="29" type="2" difference="0" hardness="Strong"/>
+                <depend id="34" type="2" difference="0" hardness="Strong"/>
+                <task id="27" name="開発環境検討" color="#8cb6ce" meeting="false" start="2015-11-12" duration="1" complete="0" expand="true"/>
+                <task id="28" name="仕様決定・作業見積り・計画書作成" color="#8cb6ce" meeting="false" start="2015-11-12" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="29" name="システム開発" color="#000000" meeting="false" start="2015-11-13" duration="30" complete="0" expand="true">
+                <depend id="34" type="2" difference="0" hardness="Strong"/>
+                <task id="30" name="概略設計・システム設計" color="#000000" meeting="false" start="2015-11-13" duration="5" complete="0" expand="true">
+                    <depend id="32" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="32" name="詳細設計" color="#000000" meeting="false" start="2015-11-20" duration="3" complete="0" expand="true"/>
+                <task id="31" name="画面デザイン" color="#8cb6ce" meeting="false" start="2015-11-13" duration="30" complete="0" expand="true"/>
+            </task>
+            <task id="34" name="テスト・評価" color="#000000" meeting="false" start="2016-01-29" duration="2" complete="0" expand="true">
+                <depend id="143" type="2" difference="0" hardness="Strong"/>
+                <task id="165" name="結合テスト" color="#8cb6ce" meeting="false" start="2016-01-29" duration="2" complete="0" expand="true"/>
+                <task id="167" name="システムの評価" color="#000000" meeting="false" start="2016-01-29" duration="1" complete="0" expand="true"/>
+                <task id="36" name="本番環境での動作確認" color="#8cb6ce" meeting="false" start="2016-01-29" duration="1" complete="0" expand="true"/>
+                <task id="171" name="システムの最終調整" color="#8cb6ce" meeting="false" start="2016-01-29" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="11" name="完成予定" color="#ff0000" meeting="true" start="2016-02-25" duration="0" complete="0" expand="true"/>
+            <task id="143" name="ドキュメント作成" color="#000000" meeting="false" start="2016-02-02" duration="5" complete="0" expand="true">
+                <task id="148" name="プレゼン資料" color="#8cb6ce" meeting="false" start="2016-02-02" duration="5" complete="0" expand="true"/>
+                <task id="150" name="ソフトウェアマニュアル" color="#8cb6ce" meeting="false" start="2016-02-02" duration="5" complete="0" expand="true"/>
+            </task>
+            <task id="232" name="発表(プレゼンテーション)" color="#ff0000" meeting="true" start="2016-02-25" duration="0" complete="0" expand="true">
+                <notes><![CDATA[卒業制作物を
+１．プレゼンテーション資料に基づいてプレゼンする。
+２．実際に動作させてみてデモンストレーションする。]]></notes>
+            </task>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="ＸＸさん" function="1" contacts="" phone=""/>
+        <resource id="1" name="ＹＹくん" function="2" contacts="" phone=""/>
+        <resource id="2" name="ＺＺさん" function="3" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="17" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="179" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="25" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="150" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="32" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="30" resource-id="0" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="22" resource-id="1" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="23" resource-id="1" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="232" resource-id="1" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="31" resource-id="1" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="28" resource-id="1" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="158" resource-id="2" function="3" responsible="true" load="100.0"/>
+        <allocation task-id="148" resource-id="2" function="3" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles>
+        <role id="1" name="プロジェクトリーダー"/>
+        <role id="2" name="システムデザイン"/>
+        <role id="3" name="システムプログラム"/>
+        <role id="4" name="システムテスト"/>
+        <role id="5" name="プレゼンテーション"/>
+    </roles>
+</project>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+    
+    //    $(function () {
+    //        $('#login').click(function(){
+    //            $("form").fadeOut();
+ 
+    //        });
+    //    });
+
+        //JQuery1.9以降変化する要素に動作が入れられなくなった
+        //なので親要素に動作を仕込むとよい
+        //ドキュメントの取得後[#login]にクリック判定
+        $(document).on('click','#login',function(){
+            //クリック後の動作を記述
+            $("form").fadeOut();
+        });
+
+    </script>
+    <style type="text/css">
+    <!--
+        div{
+            width:100px;
+            height:100px;
+            color:#fff;
+            background-color:#09C;
+        }
+    -->
+    </style>					
+</head>
+
+<body>
+    <div>
+            <form class="form">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button type="submit" id="login">Login</button>
+        </form>
+    </div>
+    <form></form><button type="submit" id="login2">Login</button>
+</body>
+</html>

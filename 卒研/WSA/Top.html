@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WSA</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/Top.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="vue.js"></script>
+
+  </head>
+  <body>
+    <h1>WSA</h1>
+    <div class="dark-button button-wrapper">
+      <div class="button">
+          <span>
+              Buy Now
+          </span>
+      </div>  
+  </div>
+  
+  <div class="light-button button-wrapper">
+      <div class="button">
+          <span>
+              Buy Now
+          </span>
+      </div>  
+  </div>
+  
+  <div class="dark-button-2 button-wrapper">
+      <div class="button">
+          <span>
+              Buy Now
+          </span>
+      </div>  
+  </div>
+     
+  <div id="app">
+    <button v-on:click="show=!show">click</button>
+    <transition>
+      <div v-if="show">Hello, world!</div>
+    </transition>
+  </div>
+  <script src="Top.js"></script>
+
+
+  <div class='box'>
+    <div class='wave -one'></div>
+    <div class='wave -two'></div>
+    <div class='wave -three'></div>
+    <div class='title'>Capacities</div>
+  </div>
+
+
+  <div class="holder">
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="third"></div>
+    <div class="txt">
+      <h1>Mood Lighting</h1>
+      <p>Using only CSS</p>
+    </div>
+  </div>
+  </body>
+</html>
