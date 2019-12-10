@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css1.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script>
+    $(function () {
+        $("#nav").load("nav.html");
+    });
+</script>
+
+<body>
+
+    <nav id="nav" class="navbar navbar-expand-md navbar-dark bg-dark">
+    </nav>
+
+    <video id="camera"></video>
+
+    <canvas id="picture"></canvas>
+
+
+    <form>
+        <button type="button" id="shutter">シャッター</button>
+    </form>
+
+    <audio id="se" preload="auto">
+        <source src="camera-shutter1.mp3" type="audio/mp3">
+    </audio>
+
+
+
+
+    <script>
+        var theCanvas = document.getElementById('canvas');
+
+        function canvas_resize() {
+            var windowInnerWidth = window.innerWidth;
+            var windowInnerHeight = window.innerHeight;
+
+            theCanvas.setAttribute('width', windowInnerWidth);
+            theCanvas.setAttribute('height', windowInnerHeight);
+        }
+
+        window.addEventListener('resize', canvas_resize, false);
+
+        canvas_resize();
+    </script>
+    <script>
+        window.onload = () => {
+            const video = document.querySelector("#camera");
+            const canvas = document.querySelector("#picture");
+            const se = document.querySelector('#se');
+
+            /** カメラ設定 */
+            const constraints = {
+                audio: false,
+                video: {
+                    width: { min: 1280, ideal: 1280, max: 1280 },
+                    height: { min: 720, ideal: 720, max: 720 },
+                    facingMode: "user",  // フロントカメラを利用する
+                    // facingMode: { exact: "environment" }  // リアカメラを利用する場合
+                }
+            };
+
+            /**
+             * カメラを<video>と同期
+             */
+            navigator.mediaDevices.getUserMedia(constraints)
+                .then((stream) => {
+                    video.srcObject = stream;
+                    video.onloadedmetadata = (e) => {
+                        video.play();
+                    };
+                })
+                .catch((err) => {
+                    console.log(err.name + ": " + err.message);
+                });
+
+            /**
+             * シャッターボタン
+             */
+            document.querySelector("#shutter").addEventListener("click", () => {
+                const ctx = canvas.getContext("2d");
+
+                // 演出的な目的で一度映像を止めてSEを再生する
+                video.pause();  // 映像を停止
+                se.play();      // シャッター音
+                setTimeout(() => {
+                    video.play();    // 0.5秒後にカメラ再開
+                }, 500);
+
+                // canvasに画像を貼り付ける
+                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            });
+        };
+    </script>
+
+</body>
+
+</html>

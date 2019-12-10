@@ -1,0 +1,69 @@
+<a class="navbar-brand" href="#">WSA</a>
+<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber"
+    aria-expanded="false" aria-label="ナビゲーションの切替">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="Navber">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">ホーム <span class="sr-only">(現位置)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="camera.html">カメラ</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="ar.html">AR</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                ドロップダウン
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="Registration.html">登録</a>
+                <a class="dropdown-item" href="select.html">セレクト</a>
+                <div class=" dropdown-divider"></div>
+                <a class="dropdown-item" href="#">その他</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true"></a>
+        </li>
+    </ul>
+
+    <button type="button" class="btn btn-primary ml-auto" data-toggle="modal" data-target="#myModal">
+        ログイン
+    </button>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ログイン</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="InputEmail1">Eメールアドレス</label>
+                            <input type="email" class="form-control" id="InputEmail1" placeholder="Eメールアドレス">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputPassword1">パスワード</label>
+                            <input type="password" class="form-control" id="InputPassword1" placeholder="パスワード">
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-dismiss="modal">送信する</button>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div><!-- /.navbar-collapse -->
+<script>
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+</script>

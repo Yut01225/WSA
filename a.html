@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</head>
+<script>
+    var $submitBtn = document.getElementById('text');
+    $submitBtn.on('click', function () {
+        setTimeout(function () {
+            $('body').append('<div class="loading"><img src="HIRO.jpg" /></div>');
+        }, 100);
+    });
+
+</script>
+<style>
+    div {
+        background-color: red;
+    }
+</style>
+
+<body>
+    <div id="test">
+        <form id="form">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Eメールアドレス</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Eメールアドレス">
+                <small class="text-muted">あなたのメールは他の誰とも共有しません。</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">パスワード</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="パスワード">
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">記憶する</label>
+            </div>
+            <button type="submit" id="text" class="btn btn-primary">送信する</button>
+        </form>
+    </div>
+</body>
+
+
+</html>
