@@ -30,6 +30,8 @@
             console.log("ログイン中のユーザー: " + currentUser.get("userName"));
             var p = document.getElementById("p");
             p.innerHTML = currentUser.get("userName");
+            var body = document.getElementById("loadnav");
+            body.innerHTML = '<nav id="nav" class="navbar navbar-expand-md navbar-dark bg-dark"></nav >';
             $("#nav").load("nav.html");
         } else {
             console.log("未ログインまたは取得に失敗");
@@ -40,8 +42,7 @@
 </script>
 
 <body>
-    <nav id="nav" class="navbar navbar-expand-md navbar-dark bg-dark">
-    </nav>
+    <div id="loadnav"></div>
     <div id="p">
 
     </div>
